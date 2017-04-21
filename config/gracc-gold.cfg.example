@@ -1,0 +1,45 @@
+
+
+[main]
+
+state_dir = /var/lib/gracc-gold
+log = /var/log/gracc-gold/gracc-gold.log
+gold_home = /opt/gold/default
+error_email = rynge@isi.edu
+
+
+[es]
+
+url = https://gracc.opensciencegrid.org/q
+use_ssl = True
+timeout = 60
+
+
+###
+# Below here are sections describing maps from probes/projects
+# to projects registered in Gold. On xd-login this is a 1-to-1
+# map, but data from other probes need to be mapped using
+# override_project_name and override_user.
+# All data maps have to be named starting with map_
+
+
+[map_xdlogin_tg]
+
+probe = xd-login.opensciencegrid.org
+
+
+[map_TG_PHY160031_1]
+
+probe = *osgconnect.net
+project_name = VERITAS
+override_project_name = TG-PHY160031
+override_user = nepomuk
+
+
+[map_TG_PHY160031_2]
+
+probe = login.uchicago.ci-connect.net
+project_name = VERITAS
+override_project_name = TG-PHY160031
+override_user = nepomuk
+

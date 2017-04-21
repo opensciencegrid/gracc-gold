@@ -1,0 +1,3 @@
+MAILTO=rynge@isi.edu
+
+15 * * * * gold /usr/bin/gracc-gold -s 120

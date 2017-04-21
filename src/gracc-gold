@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+
+import sys
+
+import gracc_gold.main
+
+if __name__ == '__main__':
+    retval = gracc_gold.main.main()
+    sys.exit(retval)
