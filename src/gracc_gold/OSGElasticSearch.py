@@ -49,9 +49,9 @@ class OSGElasticSearch(object):
         
         # only do this months index - small problem when crossing month
         # boundaries, but the data ignored is minor
-        # example: gracc.osg.raw-2016.11
+        # example: gracc.osg.raw3-2016.11
         now = datetime.utcnow()
-        index = 'gracc.osg.raw-' + now.strftime("%Y.%m")
+        index = 'gracc.osg.raw3-' + now.strftime("%Y.%m")
        
         # figure out end date - query for 1 week max
         start_ts = date_to_epoch(start_time)
